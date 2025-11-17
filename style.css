@@ -24,8 +24,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  width: clamp(300px, 70vw, 1000px);
+  width: clamp(300px, 90vw, 1000px);
   text-align: center;
+  padding: 0 15px;
 }
 
 .logo-top img {
@@ -36,16 +37,18 @@ body {
 }
 
 .logo-subtitle {
-  font-size: clamp(0.65rem, 1.2vw, 0.95rem);
+  font-size: clamp(0.6rem, 1.8vw, 0.95rem);
   color: #fff;
   font-weight: 400;
-  letter-spacing: clamp(0.5px, 0.2vw, 1px);
-  line-height: 1.3;
+  letter-spacing: clamp(0.3px, 0.2vw, 1px);
+  line-height: 1.5;
   max-width: 100%;
-  margin: clamp(30px, 8vh, 60px) auto 0;
-  padding: 0 20px;
+  margin: clamp(15px, 5vh, 60px) auto 0;
+  padding: 0 10px;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .logo-subtitle .furia {
@@ -237,6 +240,21 @@ body {
 
 /* TELAS PEQUENAS - Ajustes adicionais */
 @media (max-width: 480px) {
+  .logo-top {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .logo-subtitle {
+    font-size: clamp(0.55rem, 2.5vw, 0.7rem);
+    line-height: 1.4;
+    max-width: 100%;
+    white-space: normal;
+    padding: 0 5px;
+    letter-spacing: 0.3px;
+    margin-top: 10px;
+  }
+
   .countdown {
     gap: 8px;
   }
@@ -259,22 +277,16 @@ body {
     max-width: 280px;
     justify-content: center;
   }
-
-  .logo-subtitle {
-    font-size: 0.55rem;
-    line-height: 1.3;
-    max-width: 95%;
-    white-space: normal;
-    padding: 0 10px;
-  }
-
-  .logo-top {
-    width: 95%;
-  }
 }
 
 /* TELAS MUITO PEQUENAS */
 @media (max-width: 320px) {
+  .logo-subtitle {
+    font-size: 0.5rem;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+  }
+
   .countdown-item {
     min-width: 65px;
     padding: 12px 15px;
@@ -285,10 +297,6 @@ body {
   }
 
   .countdown-label {
-    font-size: 0.5rem;
-  }
-
-  .logo-subtitle {
     font-size: 0.5rem;
   }
 }
@@ -323,8 +331,13 @@ body {
     top: 15px;
   }
 
-  .logo-top {
+  .logo-top img {
     width: clamp(60px, 15vw, 100px);
+  }
+
+  .logo-subtitle {
+    font-size: 0.5rem;
+    margin-top: 8px;
   }
 
   .logo-bottom {
