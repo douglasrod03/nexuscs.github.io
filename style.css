@@ -44,7 +44,7 @@ body {
   letter-spacing: 0.5px;
   line-height: 1.4;
   max-width: 100%;
-  margin: 10px auto 0;
+  margin: clamp(30px, 8vh, 60px) auto 0;
   padding: 0;
   text-align: center;
   white-space: normal;
