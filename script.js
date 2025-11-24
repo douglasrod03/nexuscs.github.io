@@ -1,6 +1,6 @@
 // Define a data final da contagem regressiva
-// Termina em 24/11/2025 às 18:00
-const dataFinal = new Date("2025-11-24T18:00:00").getTime()
+// Termina em 24/11/2025 às 19:00
+const dataFinal = new Date("2025-11-24T19:00:00").getTime()
 
 // Função para atualizar o contador
 function atualizarContador() {
