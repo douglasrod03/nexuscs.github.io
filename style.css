@@ -8,8 +8,8 @@ body {
   background-color: #000;
   font-family: "Orbitron", sans-serif;
   color: #fff;
-  overflow-x: hidden;
-  min-height: 100vh;
+  overflow: hidden;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,18 +90,40 @@ body {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  padding: clamp(140px, 20vh, 200px) 20px 120px;
+  padding: clamp(120px, 16vh, 160px) 20px 100px;
 }
 
 /* TÍTULO "EM BREVE" */
 .title {
-  font-size: clamp(2rem, 8vw, 6rem);
+  font-size: clamp(1.5rem, 6vw, 4rem);
   font-weight: 900;
   letter-spacing: clamp(6px, 2vw, 20px);
   color: #c00000;
-  margin-bottom: clamp(40px, 8vh, 80px);
+  margin-bottom: clamp(20px, 4vh, 40px);
   text-shadow: 0 0 40px rgba(192, 0, 0, 0.6);
   word-wrap: break-word;
+}
+
+/* CONTAINER DO VÍDEO */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto clamp(20px, 3vh, 40px);
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
 }
 
 /* CONTADOR */
@@ -263,6 +285,15 @@ body {
     margin-top: 8px;
   }
 
+  .video-container {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .video-container iframe {
+    border-radius: 8px;
+  }
+
   .countdown {
     gap: 8px;
   }
@@ -306,6 +337,14 @@ body {
     margin-top: 6px;
   }
 
+  .video-container {
+    border-radius: 6px;
+  }
+
+  .video-container iframe {
+    border-radius: 6px;
+  }
+
   .countdown-item {
     min-width: 65px;
     padding: 12px 15px;
@@ -326,6 +365,10 @@ body {
     max-width: 1600px;
   }
 
+  .video-container {
+    max-width: 1200px;
+  }
+
   .logo-bottom {
     width: 650px;
     max-height: 75vh;
@@ -340,6 +383,10 @@ body {
 
   .title {
     margin-bottom: 30px;
+  }
+
+  .video-container {
+    margin-bottom: 25px;
   }
 
   .countdown {
